@@ -64,7 +64,7 @@ bool ServiceClient<T_REQ, T_RSP, OnResponseCb>::request(CanardNodeID const remot
 }
 
 template<typename T_REQ, typename T_RSP, typename OnResponseCb>
-bool ServiceClient<T_REQ, T_RSP, OnResponseCb>::onTransferReceived(CanardRxTransfer const & transfer)
+bool ServiceClient<T_REQ, T_RSP, OnResponseCb>::onTransferReceived(RxTransfer const & transfer)
 {
   /* Deserialize the response message. */
   T_RSP rsp{};

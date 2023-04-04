@@ -155,7 +155,7 @@ void Node::processRxFrame(CanRxQueueItem<MTU_BYTES> const * const rx_queue_item)
   rx_frame.payload_size = rx_queue_item->payload_size();
   rx_frame.payload = reinterpret_cast<const void *>(rx_queue_item->payload_buf().data());
 
-  CanardRxTransfer rx_transfer;
+  RxTransfer rx_transfer;
   CanardRxSubscription * rx_subscription;
   int8_t const result = canardRxAccept(&_canard_hdl,
                                        rx_queue_item->rx_timestamp_usec(),

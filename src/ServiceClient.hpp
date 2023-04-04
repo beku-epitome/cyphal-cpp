@@ -42,7 +42,7 @@ public:
 
 
   bool request(CanardNodeID const remote_node_id, T_REQ const & req) override;
-  bool onTransferReceived(CanardRxTransfer const & transfer) override;
+  bool onTransferReceived(RxTransfer const & transfer) override;
 
 
 private:

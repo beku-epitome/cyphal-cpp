@@ -14,7 +14,7 @@
 
 #include <memory>
 
-#include "libcanard/canard.h"
+#include "RxTransfer.hpp"
 
 /**************************************************************************************
  * NAMESPACE
@@ -42,7 +42,7 @@ public:
   SubscriptionBase &operator=(SubscriptionBase &&) = delete;
 
 
-  virtual bool onTransferReceived(CanardRxTransfer const & transfer) = 0;
+  virtual bool onTransferReceived(RxTransfer const & transfer) = 0;
 
 
   [[nodiscard]] CanardRxSubscription &canard_rx_subscription() { return _canard_rx_sub; }
